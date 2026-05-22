@@ -1,0 +1,1725 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>HSK 1 — Bài 8 | Tôi muốn uống trà</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700;800&family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/hanzi-writer@3.5/dist/hanzi-writer.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/pinyin-pro@3.27.0/dist/index.js"></script>
+    <style>
+        :root {
+            /* === ELEGANT PALETTE: Ivory + Slate + Burgundy + Gold === */
+            --ivory:        #FBF9F4;   /* Nền chủ đạo - ngà ấm */
+            --ivory-deep:   #F4F0E6;
+            --paper:        #FFFFFF;
+            --line:         #E5DFD2;   /* Đường kẻ trên ivory */
+            --line-soft:    #EFEADD;
+
+            --ink:          #1E293B;   /* Slate 800 - mực chính */
+            --ink-soft:     #334155;
+            --muted:        #64748B;
+            --muted-soft:   #94A3B8;
+
+            --burgundy:     #8B1538;   /* Đỏ rượu - accent chính */
+            --burgundy-soft:#F8EBEE;
+            --burgundy-dark:#6B0F2A;
+
+            --gold:         #B8860B;   /* Vàng đồng - accent phụ */
+            --gold-soft:    #FAF5E6;
+
+            --success:      #166534;
+            --success-soft: #F0FDF4;
+
+            --shadow-xs: 0 1px 2px rgba(30, 41, 59, 0.04);
+            --shadow:    0 1px 3px rgba(30, 41, 59, 0.08), 0 1px 2px rgba(30, 41, 59, 0.04);
+            --shadow-lg: 0 4px 12px rgba(30, 41, 59, 0.08), 0 2px 4px rgba(30, 41, 59, 0.04);
+
+            --radius:    14px;
+            --radius-sm: 10px;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+        html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background: var(--ivory);
+            color: var(--ink);
+            line-height: 1.65;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            font-size: 16px;
+        }
+        .zh { font-family: 'Noto Serif SC', 'Inter', serif; }
+        .serif { font-family: 'Cormorant Garamond', 'Inter', serif; }
+
+        /* === BACKGROUND SUBTLE TEXTURE === */
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background-image:
+                radial-gradient(circle at 20% 10%, rgba(184,134,11,0.04), transparent 40%),
+                radial-gradient(circle at 80% 90%, rgba(139,21,56,0.03), transparent 40%);
+            pointer-events: none;
+            z-index: 0;
+        }
+        .container {
+            max-width: 1080px;
+            margin: 0 auto;
+            padding: 56px 24px 100px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* === HEADER === */
+        header {
+            text-align: left;
+            padding: 0 0 44px 0;
+            border-bottom: 1px solid var(--line);
+            margin-bottom: 40px;
+        }
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.78rem;
+            font-weight: 700;
+            color: var(--burgundy);
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+        .eyebrow::before, .eyebrow::after {
+            content: '';
+            width: 28px;
+            height: 1px;
+            background: var(--burgundy);
+            opacity: 0.5;
+        }
+        header h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(2.4rem, 6vw, 3.6rem);
+            font-weight: 600;
+            color: var(--ink);
+            letter-spacing: -0.01em;
+            line-height: 1.1;
+            margin-bottom: 18px;
+        }
+        header h1 .zh-title {
+            font-family: 'Noto Serif SC', serif;
+            font-weight: 600;
+            color: var(--burgundy);
+            display: block;
+            font-size: 0.92em;
+            margin-bottom: 6px;
+        }
+        header h1 .vi-title {
+            font-style: italic;
+            font-weight: 500;
+        }
+        header .lead {
+            font-size: clamp(1rem, 2.5vw, 1.15rem);
+            color: var(--ink-soft);
+            max-width: 700px;
+            line-height: 1.7;
+        }
+        header .lead em { font-style: italic; color: var(--burgundy); }
+
+        /* === TABS === */
+        .tabs-nav {
+            display: flex;
+            gap: 2px;
+            margin-bottom: 40px;
+            border-bottom: 1px solid var(--line);
+            position: sticky;
+            top: 0;
+            background: var(--ivory);
+            backdrop-filter: blur(8px);
+            z-index: 50;
+            padding: 12px 0 0;
+            overflow-x: auto;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+        .tabs-nav::-webkit-scrollbar { display: none; }
+        .tab-btn {
+            padding: 12px 18px;
+            border: none;
+            border-bottom: 2px solid transparent;
+            background: transparent;
+            color: var(--muted);
+            font-weight: 500;
+            font-size: 0.94rem;
+            cursor: pointer;
+            transition: color 0.18s, border-color 0.18s;
+            font-family: inherit;
+            margin-bottom: -1px;
+            flex: 0 0 auto;
+            white-space: nowrap;
+        }
+        .tab-btn:hover { color: var(--ink); }
+        .tab-btn.active {
+            color: var(--burgundy);
+            border-bottom-color: var(--burgundy);
+            font-weight: 600;
+        }
+
+        /* === TAB CONTENT === */
+        .tab-content { display: none; animation: fadeIn 0.32s ease; }
+        .tab-content.active { display: block; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+
+        .section-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(1.7rem, 4vw, 2.1rem);
+            font-weight: 600;
+            margin-bottom: 8px;
+            letter-spacing: -0.005em;
+            color: var(--ink);
+        }
+        .section-sub {
+            color: var(--muted);
+            font-size: 1rem;
+            margin-bottom: 32px;
+            max-width: 680px;
+            line-height: 1.7;
+        }
+        .section-sub em { color: var(--burgundy); font-style: normal; font-weight: 600; }
+
+        /* === CARDS === */
+        .card {
+            background: var(--paper);
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            padding: 28px;
+            margin-bottom: 20px;
+            box-shadow: var(--shadow-xs);
+            transition: box-shadow 0.2s, border-color 0.2s;
+        }
+        .card:hover { border-color: var(--line); box-shadow: var(--shadow); }
+        .card h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.55rem;
+            font-weight: 600;
+            margin-bottom: 14px;
+            color: var(--ink);
+            letter-spacing: -0.005em;
+        }
+        .card p, .card li { color: var(--ink-soft); font-size: 1rem; }
+        .card li { margin-bottom: 8px; }
+
+        /* === GOAL TAB === */
+        .goal-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 18px;
+            margin-top: 28px;
+        }
+        .goal-item {
+            background: var(--paper);
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            padding: 26px;
+            box-shadow: var(--shadow-xs);
+            position: relative;
+            overflow: hidden;
+        }
+        .goal-item::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0;
+            width: 36px; height: 3px;
+            background: var(--burgundy);
+        }
+        .goal-item .num {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.4rem;
+            font-weight: 600;
+            color: var(--gold);
+            line-height: 1;
+            margin-bottom: 10px;
+        }
+        .goal-item h4 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--ink);
+        }
+        .goal-item p { font-size: 0.96rem; color: var(--ink-soft); }
+
+        /* === VOCAB GRID (1 per row) === */
+        .vocab-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 24px;
+        }
+        .vocab-card {
+            background: var(--paper);
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            padding: 0;
+            transition: box-shadow 0.22s, border-color 0.22s;
+            box-shadow: var(--shadow-xs);
+            overflow: hidden;
+            position: relative;
+        }
+        .vocab-card:hover { box-shadow: var(--shadow-lg); border-color: var(--gold); }
+
+        /* Decorative side stripe */
+        .vocab-card::before {
+            content: '';
+            position: absolute;
+            left: 0; top: 0; bottom: 0;
+            width: 4px;
+            background: linear-gradient(180deg, var(--burgundy) 0%, var(--gold) 100%);
+        }
+
+        .vocab-inner {
+            display: grid;
+            grid-template-columns: minmax(280px, 1fr) minmax(280px, 1.3fr);
+            gap: 32px;
+            padding: 28px 28px 28px 32px;
+        }
+        .vocab-left { min-width: 0; }
+        .vocab-right {
+            min-width: 0;
+            border-left: 1px solid var(--line-soft);
+            padding-left: 32px;
+        }
+
+        .vocab-header-row {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+            margin-bottom: 18px;
+        }
+        .writer-box {
+            background: linear-gradient(135deg, var(--ivory) 0%, var(--ivory-deep) 100%);
+            border: 1px solid var(--line);
+            border-radius: var(--radius-sm);
+            padding: 12px 12px 8px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            position: relative;
+        }
+        .writer-box::after {
+            content: '';
+            position: absolute;
+            inset: 4px;
+            border: 1px solid var(--gold);
+            border-radius: 6px;
+            opacity: 0.25;
+            pointer-events: none;
+        }
+        .writer-box .hw-target { width: 112px; height: 112px; }
+        .btn-animate {
+            background: var(--ink);
+            color: var(--ivory);
+            border: none;
+            padding: 6px 14px;
+            border-radius: 999px;
+            font-size: 0.74rem;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 8px;
+            transition: background 0.18s;
+            letter-spacing: 0.03em;
+            font-family: inherit;
+        }
+        .btn-animate:hover { background: var(--burgundy); }
+
+        .vocab-info { flex: 1; min-width: 0; }
+        .vocab-index {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 0.88rem;
+            font-weight: 600;
+            color: var(--gold);
+            letter-spacing: 0.14em;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+        }
+        .pinyin {
+            font-size: 1.9rem;
+            color: var(--ink);
+            font-weight: 700;
+            line-height: 1.05;
+            margin-bottom: 6px;
+            letter-spacing: -0.015em;
+            font-family: 'Cormorant Garamond', serif;
+        }
+        .hanviet {
+            font-size: 0.92rem;
+            color: var(--muted);
+            margin-bottom: 12px;
+            font-style: italic;
+        }
+        .hanviet b { color: var(--burgundy); font-style: normal; font-weight: 600; }
+        .type-badge {
+            display: inline-block;
+            background: var(--gold-soft);
+            color: var(--gold);
+            padding: 4px 12px;
+            border-radius: 999px;
+            font-size: 0.76rem;
+            font-weight: 600;
+            border: 1px solid rgba(184, 134, 11, 0.2);
+            letter-spacing: 0.02em;
+        }
+
+        .vocab-section { margin-top: 16px; }
+        .vocab-section h4 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 0.82rem;
+            color: var(--muted);
+            margin-bottom: 6px;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            font-weight: 700;
+        }
+        .vocab-meaning {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--ink);
+            margin-bottom: 4px;
+            font-family: 'Cormorant Garamond', serif;
+            line-height: 1.3;
+        }
+        .vocab-meta { font-size: 0.96rem; color: var(--ink-soft); }
+        .vocab-story {
+            font-size: 0.95rem;
+            color: var(--ink-soft);
+            background: var(--ivory);
+            padding: 12px 14px;
+            border-radius: var(--radius-sm);
+            border-left: 3px solid var(--gold);
+            line-height: 1.65;
+        }
+        .vocab-example {
+            padding: 14px 16px;
+            border-radius: var(--radius-sm);
+            background: var(--burgundy-soft);
+            border-left: 3px solid var(--burgundy);
+        }
+        .ex-zh {
+            font-weight: 600;
+            color: var(--burgundy-dark);
+            font-size: 1.1rem;
+            font-family: 'Noto Serif SC', serif;
+            line-height: 1.5;
+        }
+        .ex-py { color: var(--muted); font-size: 0.92rem; margin-top: 4px; font-style: italic; }
+
+        /* === TEACHER EXAMPLE TOOL (full width below) === */
+        .teach-tool {
+            grid-column: 1 / -1;
+            background: linear-gradient(135deg, var(--ivory) 0%, var(--gold-soft) 100%);
+            border-top: 1px solid var(--gold);
+            margin: 0;
+            padding: 22px 28px 24px 32px;
+        }
+        .teach-tool-label {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--burgundy);
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+        .teach-tool-label::before {
+            content: "✎";
+            font-size: 1.4rem;
+            color: var(--gold);
+        }
+        .teach-tool-label .badge-new {
+            background: var(--burgundy);
+            color: var(--ivory);
+            font-size: 0.65rem;
+            padding: 2px 8px;
+            border-radius: 999px;
+            letter-spacing: 0.1em;
+            font-weight: 700;
+        }
+        .teach-input {
+            width: 100%;
+            min-height: 64px;
+            border: 1px solid var(--line);
+            border-radius: var(--radius-sm);
+            padding: 12px 14px;
+            font-family: 'Noto Serif SC', 'Inter', sans-serif;
+            font-size: 1.08rem;
+            color: var(--ink);
+            background: var(--paper);
+            resize: vertical;
+            outline: none;
+            transition: border-color 0.18s, box-shadow 0.18s;
+            line-height: 1.6;
+        }
+        .teach-input:focus {
+            border-color: var(--burgundy);
+            box-shadow: 0 0 0 3px rgba(139, 21, 56, 0.08);
+        }
+        .teach-input::placeholder {
+            color: var(--muted-soft);
+            font-family: 'Inter', sans-serif;
+            font-size: 0.92rem;
+            font-style: italic;
+        }
+
+        .teach-preview {
+            margin-top: 12px;
+            background: var(--paper);
+            border: 1px solid var(--line);
+            border-radius: var(--radius-sm);
+            padding: 16px;
+            min-height: 64px;
+            position: relative;
+        }
+        .teach-preview.empty::before {
+            content: "Bản xem trước Hán + Pinyin sẽ hiển thị tại đây…";
+            color: var(--muted-soft);
+            font-size: 0.9rem;
+            font-style: italic;
+        }
+        .teach-preview ruby {
+            display: inline-flex;
+            flex-direction: column-reverse;
+            align-items: center;
+            margin: 0 3px 8px 3px;
+            vertical-align: top;
+            line-height: 1;
+        }
+        .teach-preview ruby rb {
+            font-family: 'Noto Serif SC', serif;
+            font-size: 1.7rem;
+            color: var(--ink);
+            font-weight: 500;
+            line-height: 1.25;
+        }
+        .teach-preview ruby rt {
+            font-size: 0.82rem;
+            color: var(--burgundy);
+            font-weight: 600;
+            font-family: 'Inter', sans-serif;
+            margin-bottom: 3px;
+            line-height: 1;
+        }
+        .teach-preview .punct {
+            font-family: 'Noto Serif SC', serif;
+            font-size: 1.7rem;
+            color: var(--ink);
+            margin: 0 1px;
+        }
+
+        .teach-actions {
+            margin-top: 12px;
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+        .teach-btn {
+            background: var(--paper);
+            border: 1px solid var(--line);
+            color: var(--ink-soft);
+            padding: 8px 14px;
+            border-radius: 999px;
+            font-size: 0.84rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.18s;
+            font-family: inherit;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .teach-btn:hover {
+            background: var(--ink);
+            color: var(--ivory);
+            border-color: var(--ink);
+        }
+        .teach-btn.primary {
+            background: var(--burgundy);
+            color: var(--ivory);
+            border-color: var(--burgundy);
+        }
+        .teach-btn.primary:hover { background: var(--burgundy-dark); border-color: var(--burgundy-dark); }
+        .teach-btn.ghost { background: transparent; }
+        .teach-btn.gold {
+            border-color: var(--gold);
+            color: var(--gold);
+            background: var(--gold-soft);
+        }
+        .teach-btn.gold:hover {
+            background: var(--gold);
+            color: var(--ivory);
+        }
+
+        /* === FLASHCARD === */
+        .fc-wrapper { display: flex; flex-direction: column; align-items: center; margin: 24px 0 40px; perspective: 1200px; }
+        .fc-progress {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1rem;
+            color: var(--muted);
+            margin-bottom: 18px;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+        }
+        .fc-card {
+            width: 100%; max-width: 460px; height: 340px; position: relative;
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1); transform-style: preserve-3d;
+            cursor: pointer;
+        }
+        .fc-card.is-flipped { transform: rotateY(180deg); }
+        .fc-face {
+            position: absolute; width: 100%; height: 100%;
+            -webkit-backface-visibility: hidden; backface-visibility: hidden;
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+            border-radius: 18px;
+            padding: 28px; text-align: center;
+            box-shadow: var(--shadow-lg);
+        }
+        .fc-front {
+            background: var(--paper);
+            border: 1px solid var(--line);
+        }
+        .fc-front::before {
+            content: '';
+            position: absolute;
+            inset: 12px;
+            border: 1px solid var(--gold);
+            border-radius: 12px;
+            opacity: 0.3;
+        }
+        .fc-front .fc-hz {
+            font-size: 6.5rem;
+            font-weight: 600;
+            font-family: 'Noto Serif SC', serif;
+            color: var(--ink);
+        }
+        .fc-back {
+            transform: rotateY(180deg);
+            background: linear-gradient(135deg, var(--burgundy-dark) 0%, var(--burgundy) 100%);
+            border: 1px solid var(--burgundy);
+            color: var(--ivory);
+        }
+        .fc-back .fc-py {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.6rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+            letter-spacing: -0.01em;
+            color: var(--gold-soft);
+        }
+        .fc-back .fc-mean { font-size: 1.35rem; font-weight: 500; font-family: 'Cormorant Garamond', serif; }
+        .fc-back .fc-ex {
+            font-size: 1.05rem;
+            color: rgba(251, 249, 244, 0.75);
+            margin-top: 22px;
+            padding-top: 22px;
+            border-top: 1px solid rgba(251, 249, 244, 0.2);
+            font-family: 'Noto Serif SC', serif;
+        }
+        .fc-controls { display: flex; gap: 12px; margin-top: 28px; flex-wrap: wrap; justify-content: center; }
+        .fc-btn {
+            background: var(--paper);
+            border: 1px solid var(--line);
+            padding: 10px 22px;
+            border-radius: 999px; cursor: pointer; font-weight: 600; color: var(--ink);
+            transition: all 0.18s; font-family: inherit; font-size: 0.92rem;
+        }
+        .fc-btn:hover { background: var(--ivory-deep); }
+        .fc-btn.primary { background: var(--ink); color: var(--ivory); border-color: var(--ink); }
+        .fc-btn.primary:hover { background: var(--burgundy); border-color: var(--burgundy); }
+
+        /* === GRAMMAR === */
+        .grammar-formula {
+            background: var(--ink);
+            color: var(--ivory);
+            padding: 18px 22px;
+            border-radius: var(--radius-sm);
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+            font-size: 1.05rem;
+            text-align: left;
+            margin: 18px 0;
+            letter-spacing: 0.02em;
+            box-shadow: var(--shadow);
+        }
+        .grammar-formula span { color: var(--gold); font-weight: 700; }
+        .grammar-tip {
+            background: var(--gold-soft);
+            border-left: 3px solid var(--gold);
+            padding: 14px 18px;
+            border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+            margin-top: 16px;
+            font-size: 0.97rem;
+        }
+        .grammar-tip strong { color: var(--gold); }
+        .grammar-error {
+            background: var(--burgundy-soft);
+            border-left: 3px solid var(--burgundy);
+            padding: 14px 18px;
+            border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+            margin-top: 16px;
+            font-size: 0.97rem;
+        }
+        .grammar-error strong { color: var(--burgundy); }
+
+        /* === ERRORS === */
+        .error-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+        .error-box {
+            padding: 0;
+            overflow: hidden;
+            border-radius: var(--radius);
+            border: 1px solid var(--line);
+            background: var(--paper);
+            box-shadow: var(--shadow-xs);
+        }
+        .err-head {
+            padding: 12px 18px;
+            font-weight: 700;
+            font-size: 0.88rem;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+        }
+        .err-head.wrong { background: var(--burgundy); color: var(--ivory); }
+        .err-head.correct { background: var(--ink); color: var(--ivory); }
+        .err-body { padding: 18px; font-size: 0.98rem; color: var(--ink-soft); }
+        .strike { text-decoration: line-through; color: var(--burgundy); font-weight: 500; }
+        .correct-text { color: var(--ink); font-weight: 700; font-size: 1.08rem; }
+
+        /* === PRACTICE & QUIZ === */
+        .exercise-section { margin-bottom: 40px; }
+        .ex-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.35rem;
+            font-weight: 600;
+            padding: 12px 0;
+            margin-bottom: 18px;
+            border-bottom: 1px solid var(--line);
+            color: var(--ink);
+        }
+        .q-box {
+            background: var(--paper);
+            padding: 24px;
+            border-radius: var(--radius);
+            margin-bottom: 16px;
+            border: 1px solid var(--line);
+            box-shadow: var(--shadow-xs);
+        }
+        .q-prompt { font-size: 1.05rem; font-weight: 600; margin-bottom: 16px; color: var(--ink); }
+        .q-options { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 10px; }
+        .q-opt {
+            padding: 12px 16px;
+            border: 1px solid var(--line);
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.14s;
+            font-size: 0.97rem;
+            font-weight: 500;
+            background: var(--paper);
+            color: var(--ink-soft);
+        }
+        .q-opt:hover { background: var(--ivory); border-color: var(--gold); }
+        .q-opt input { accent-color: var(--burgundy); }
+
+        .answer-reveal {
+            margin-top: 16px;
+            padding: 16px;
+            border-radius: var(--radius-sm);
+            display: none;
+            background: var(--gold-soft);
+            border-left: 3px solid var(--gold);
+            font-size: 0.95rem;
+        }
+        .answer-reveal strong { color: var(--gold); }
+        .btn-toggle {
+            background: transparent;
+            color: var(--ink-soft);
+            border: 1px solid var(--line);
+            padding: 7px 16px;
+            border-radius: 999px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.84rem;
+            margin-top: 14px;
+            font-family: inherit;
+            transition: all 0.18s;
+        }
+        .btn-toggle:hover { background: var(--ink); color: var(--ivory); border-color: var(--ink); }
+
+        .btn-submit {
+            background: var(--burgundy);
+            color: var(--ivory);
+            border: none;
+            padding: 14px 36px;
+            font-size: 1rem;
+            font-weight: 700;
+            border-radius: 999px;
+            cursor: pointer;
+            display: block;
+            margin: 36px auto;
+            transition: all 0.2s;
+            font-family: inherit;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            box-shadow: var(--shadow);
+        }
+        .btn-submit:hover { background: var(--burgundy-dark); transform: translateY(-1px); box-shadow: var(--shadow-lg); }
+
+        .quiz-feedback.is-correct {
+            background: var(--success-soft);
+            border-left: 3px solid var(--success);
+            padding: 16px;
+            border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+            margin-top: 16px;
+            display: none;
+        }
+        .quiz-feedback.is-correct strong { color: var(--success); }
+        .quiz-feedback.is-wrong {
+            background: var(--burgundy-soft);
+            border-left: 3px solid var(--burgundy);
+            padding: 16px;
+            border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+            margin-top: 16px;
+            display: none;
+        }
+        .quiz-feedback.is-wrong strong { color: var(--burgundy); }
+
+        /* === DIALOGUES === */
+        .dialogue {
+            background: var(--ivory);
+            padding: 22px 26px;
+            border-radius: var(--radius-sm);
+            border-left: 3px solid var(--burgundy);
+            margin-bottom: 16px;
+            position: relative;
+        }
+        .dialogue .line { margin-bottom: 16px; }
+        .dialogue .line:last-child { margin-bottom: 0; }
+        .dialogue .role {
+            display: inline-block;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--burgundy);
+            letter-spacing: 0.18em;
+            background: var(--paper);
+            border: 1px solid var(--line);
+            border-radius: 999px;
+            padding: 2px 10px;
+            margin-bottom: 6px;
+        }
+        .dialogue .zh-text {
+            font-family: 'Noto Serif SC', serif;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--ink);
+            margin: 4px 0 2px;
+        }
+        .dialogue .py-text { color: var(--muted); font-size: 0.92rem; font-style: italic; }
+        .dialogue .vi-text { color: var(--ink-soft); font-size: 0.96rem; margin-top: 4px; }
+
+        /* === TOAST === */
+        .toast {
+            position: fixed;
+            bottom: 28px;
+            left: 50%;
+            transform: translateX(-50%) translateY(120px);
+            background: var(--ink);
+            color: var(--ivory);
+            padding: 14px 24px;
+            border-radius: 999px;
+            font-weight: 600;
+            font-size: 0.92rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+            transition: transform 0.32s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: 9999;
+            pointer-events: none;
+            max-width: calc(100vw - 32px);
+            text-align: center;
+        }
+        .toast.show { transform: translateX(-50%) translateY(0); }
+
+        /* ====== RESPONSIVE ====== */
+        @media (max-width: 900px) {
+            .vocab-inner {
+                grid-template-columns: 1fr;
+                gap: 20px;
+                padding: 24px 22px 24px 28px;
+            }
+            .vocab-right {
+                border-left: none;
+                border-top: 1px solid var(--line-soft);
+                padding-left: 0;
+                padding-top: 18px;
+            }
+            .teach-tool { padding: 20px 22px 22px 28px; }
+        }
+
+        @media (max-width: 640px) {
+            body { font-size: 15px; }
+            .container { padding: 28px 16px 80px; }
+
+            header { padding-bottom: 28px; margin-bottom: 28px; }
+            .eyebrow { font-size: 0.7rem; gap: 8px; margin-bottom: 14px; }
+            .eyebrow::before, .eyebrow::after { width: 18px; }
+            header .lead { font-size: 0.98rem; }
+
+            .tabs-nav { gap: 0; margin-bottom: 28px; padding-top: 8px; margin-left: -16px; margin-right: -16px; padding-left: 16px; padding-right: 16px; }
+            .tab-btn { padding: 10px 12px; font-size: 0.88rem; }
+
+            .section-title { margin-bottom: 6px; }
+            .section-sub { margin-bottom: 22px; font-size: 0.94rem; }
+
+            .card { padding: 20px; border-radius: 12px; }
+            .card h3 { font-size: 1.3rem; }
+
+            .goal-grid { grid-template-columns: 1fr; gap: 14px; margin-top: 22px; }
+            .goal-item { padding: 22px; }
+            .goal-item .num { font-size: 2rem; }
+
+            /* Vocab card - mobile stack */
+            .vocab-grid { gap: 18px; }
+            .vocab-inner {
+                padding: 22px 18px 22px 22px;
+                gap: 16px;
+            }
+            .vocab-card::before { width: 3px; }
+            .vocab-header-row {
+                gap: 14px;
+                flex-wrap: wrap;
+            }
+            .writer-box { padding: 10px 10px 6px; }
+            .writer-box .hw-target { width: 88px; height: 88px; }
+            .btn-animate { font-size: 0.7rem; padding: 5px 12px; }
+            .pinyin { font-size: 1.55rem; }
+            .vocab-meaning { font-size: 1.1rem; }
+            .ex-zh { font-size: 1.02rem; }
+
+            .teach-tool {
+                padding: 18px 18px 20px 22px;
+            }
+            .teach-tool-label { font-size: 0.84rem; }
+            .teach-input {
+                font-size: 1.1rem;
+                min-height: 72px;
+                padding: 12px;
+            }
+            .teach-preview ruby rb { font-size: 1.55rem; }
+            .teach-preview .punct { font-size: 1.55rem; }
+            .teach-preview ruby rt { font-size: 0.76rem; }
+            .teach-btn {
+                padding: 9px 14px;
+                font-size: 0.82rem;
+                min-height: 38px;
+            }
+
+            /* Flashcard */
+            .fc-card { height: 280px; }
+            .fc-front .fc-hz { font-size: 5rem; }
+            .fc-back .fc-py { font-size: 2rem; }
+            .fc-back .fc-mean { font-size: 1.1rem; }
+            .fc-back .fc-ex { font-size: 0.95rem; margin-top: 16px; padding-top: 16px; }
+            .fc-btn { padding: 10px 18px; font-size: 0.88rem; flex: 1 1 auto; min-width: 90px; }
+
+            /* Grammar */
+            .grammar-formula { padding: 14px 16px; font-size: 0.95rem; }
+            .grammar-tip, .grammar-error { padding: 12px 14px; font-size: 0.92rem; }
+
+            /* Errors */
+            .error-grid { gap: 14px; }
+            .err-head { padding: 10px 14px; font-size: 0.82rem; }
+            .err-body { padding: 14px; font-size: 0.94rem; }
+
+            /* Practice / Quiz */
+            .ex-title { font-size: 1.2rem; padding: 10px 0; margin-bottom: 14px; }
+            .q-box { padding: 18px; border-radius: 12px; }
+            .q-prompt { font-size: 1rem; margin-bottom: 14px; }
+            .q-options { grid-template-columns: 1fr; gap: 8px; }
+            .q-opt { padding: 12px 14px; font-size: 0.95rem; min-height: 44px; }
+            .btn-submit { padding: 13px 28px; width: 100%; max-width: 300px; }
+
+            /* Dialogue */
+            .dialogue { padding: 18px 18px; }
+            .dialogue .zh-text { font-size: 1.08rem; }
+
+            .toast { padding: 12px 20px; font-size: 0.88rem; bottom: 16px; }
+        }
+
+        @media (max-width: 380px) {
+            header h1 { font-size: 1.9rem; }
+            .pinyin { font-size: 1.4rem; }
+            .fc-front .fc-hz { font-size: 4.4rem; }
+        }
+
+        /* Print-friendly */
+        @media print {
+            body::before { display: none; }
+            .tabs-nav, .teach-actions, .btn-animate, .btn-submit, .btn-toggle { display: none; }
+            .tab-content { display: block !important; page-break-before: always; }
+            .card, .vocab-card { box-shadow: none; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <span class="eyebrow">HSK 1 · Bài 8</span>
+        <h1>
+            <span class="zh-title">我想喝茶</span>
+            <span class="vi-title">Tôi muốn uống trà</span>
+        </h1>
+        <p class="lead">
+            Chủ đề ăn uống, mua sắm đồ vật và hỏi giá tiền. Trang giảng dạy tích hợp <em>công cụ tự động chuyển Hán → Pinyin tức thì</em> ngay trong từng từ mới, hỗ trợ giảng viên soạn ví dụ và trình chiếu trên lớp.
+        </p>
+    </header>
+
+    <nav class="tabs-nav">
+        <button class="tab-btn active" onclick="openTab('tab1', this)">Mục tiêu</button>
+        <button class="tab-btn" onclick="openTab('tab2', this)">Từ vựng &amp; Bút thuận</button>
+        <button class="tab-btn" onclick="openTab('tab3', this)">Flashcard</button>
+        <button class="tab-btn" onclick="openTab('tab4', this)">Ngữ pháp</button>
+        <button class="tab-btn" onclick="openTab('tab5', this)">Mẫu câu</button>
+        <button class="tab-btn" onclick="openTab('tab6', this)">Lỗi sai</button>
+        <button class="tab-btn" onclick="openTab('tab7', this)">Luyện tập</button>
+        <button class="tab-btn" onclick="openTab('tab8', this)">Kiểm tra</button>
+    </nav>
+
+    <!-- TAB 1: MỤC TIÊU -->
+    <div id="tab1" class="tab-content active">
+        <h2 class="section-title">Mục tiêu bài học</h2>
+        <p class="section-sub">Bài 8 trang bị cho học viên kỹ năng đặt món, đi mua sắm và hỏi giá tiền bằng tiếng Trung.</p>
+
+        <div class="goal-grid">
+            <div class="goal-item">
+                <div class="num">01</div>
+                <h4>Giao tiếp</h4>
+                <p>Thể hiện ý muốn, gọi đồ ăn thức uống tại nhà hàng, hỏi giá tiền khi đi mua sắm.</p>
+            </div>
+            <div class="goal-item">
+                <div class="num">02</div>
+                <h4>Từ vựng</h4>
+                <p>18 chữ Hán trọng tâm: 想, 喝, 茶, 吃, 米, 饭, 下, 午, 商, 店, 买, 个, 杯, 多, 少, 钱, 块, 那.</p>
+            </div>
+            <div class="goal-item">
+                <div class="num">03</div>
+                <h4>Ngữ pháp</h4>
+                <p>Động từ năng nguyện 想; đại từ nghi vấn 多少; lượng từ 个, 块; cách hỏi và nói giá tiền.</p>
+            </div>
+            <div class="goal-item">
+                <div class="num">04</div>
+                <h4>Kỹ năng GV</h4>
+                <p>Mỗi từ mới có ô nhập ví dụ, tự động hiện Pinyin tức thì — hỗ trợ soạn bài và trình chiếu lớp.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- TAB 2: TỪ VỰNG -->
+    <div id="tab2" class="tab-content">
+        <h2 class="section-title">Từ vựng &amp; Chữ Hán</h2>
+        <p class="section-sub">Mỗi từ vựng được trình bày thành một <em>block ngang trọn vẹn</em> với animation bút thuận, câu chuyện chữ Hán và công cụ nhập ví dụ tự động hiện Pinyin tức thì.</p>
+        <div class="vocab-grid" id="vocab-container">
+            <!-- Rendered via JS -->
+        </div>
+    </div>
+
+    <!-- TAB 3: FLASHCARD -->
+    <div id="tab3" class="tab-content">
+        <h2 class="section-title">Flashcard ôn tập</h2>
+        <p class="section-sub">Bấm lên thẻ hoặc nút "Lật thẻ" để xem Pinyin &amp; nghĩa. Trên desktop, có thể dùng phím <em>← →</em> để chuyển và <em>Space</em> để lật.</p>
+
+        <div class="fc-wrapper">
+            <div class="fc-progress" id="fc-progress">1 / 18</div>
+            <div class="fc-card" id="fc-card" onclick="flipCard()">
+                <div class="fc-face fc-front">
+                    <div class="fc-hz" id="fc-hz">想</div>
+                </div>
+                <div class="fc-face fc-back">
+                    <div class="fc-py" id="fc-py">xiǎng</div>
+                    <div class="fc-mean" id="fc-mean">Muốn, nhớ, nghĩ</div>
+                    <div class="fc-ex" id="fc-ex">我想喝茶。</div>
+                </div>
+            </div>
+            <div class="fc-controls">
+                <button class="fc-btn" onclick="prevCard()">← Trước</button>
+                <button class="fc-btn primary" onclick="flipCard()">Lật thẻ</button>
+                <button class="fc-btn" onclick="nextCard()">Tiếp →</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- TAB 4: NGỮ PHÁP -->
+    <div id="tab4" class="tab-content">
+        <h2 class="section-title">Ngữ pháp trọng tâm</h2>
+        <p class="section-sub">Ba điểm ngữ pháp cốt lõi của Bài 8.</p>
+
+        <div class="card">
+            <h3>1. Động từ năng nguyện <span class="zh">想</span> (xiǎng)</h3>
+            <p>Dùng trước động từ để biểu đạt <strong>ý định, hy vọng, mong muốn</strong> thực hiện một việc gì đó.</p>
+            <div class="grammar-formula">S + <span>想 / 不想</span> + V + (O)</div>
+            <ul style="margin-left: 22px; line-height: 1.85;">
+                <li>Khẳng định: 我<strong>想</strong>喝茶。 <em>(Tôi muốn uống trà.)</em></li>
+                <li>Phủ định: 我<strong>不想</strong>吃米饭。 <em>(Tôi không muốn ăn cơm.)</em></li>
+                <li>Nghi vấn: 明天你<strong>想</strong>做什么？ <em>(Ngày mai bạn muốn làm gì?)</em></li>
+            </ul>
+            <div class="grammar-tip">
+                <strong>Lưu ý:</strong> Phủ định của "想" (muốn) là "不想" (không muốn). KHÔNG dùng "没想".
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>2. Đại từ nghi vấn <span class="zh">多少</span> (duōshao)</h3>
+            <p>Dùng để hỏi số lượng <strong>lớn hơn 10</strong> hoặc <strong>không xác định</strong> (khác với 几 chỉ hỏi số nhỏ hơn 10).</p>
+            <div class="grammar-formula">S + <span>多少</span> + (Lượng từ) + Danh từ ?</div>
+            <ul style="margin-left: 22px; line-height: 1.85;">
+                <li>你们学校有<strong>多少</strong>（个）学生？ <em>(Trường bạn có bao nhiêu học sinh?)</em></li>
+                <li>这个杯子<strong>多少</strong>钱？ <em>(Cái ly này bao nhiêu tiền?)</em></li>
+            </ul>
+            <div class="grammar-error">
+                <strong>Sự khác biệt:</strong> Sau "多少" có thể lược bỏ lượng từ. Nhưng sau "几" <strong>bắt buộc</strong> phải có lượng từ (几个学生).
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>3. Lượng từ <span class="zh">个</span>, <span class="zh">块</span></h3>
+            <p>Tiếng Trung có hệ thống lượng từ phong phú đi kèm với danh từ. <strong>个</strong> (cái, chiếc, người) là lượng từ phổ biến nhất. <strong>块</strong> (đồng) là lượng từ của tiền tệ.</p>
+            <div class="grammar-formula">Số từ / Đại từ chỉ định + <span>Lượng từ</span> + Danh từ</div>
+            <ul style="margin-left: 22px; line-height: 1.85;">
+                <li>三<strong>个</strong>杯子 <em>(3 cái ly)</em> / 这<strong>个</strong>人 <em>(Người này)</em></li>
+                <li>十<strong>块</strong>钱 <em>(10 đồng tiền)</em> / 那<strong>个</strong>杯子十八<strong>块</strong>钱 <em>(Cái ly kia 18 đồng)</em></li>
+            </ul>
+            <div class="grammar-error">
+                <strong>Lỗi sai người Việt:</strong> Hay quên lượng từ khi dịch "Cái ly này".<br>
+                <span class="strike">这杯子多少钱？</span> ➔ <strong>这个杯子多少钱？</strong>
+            </div>
+        </div>
+    </div>
+
+    <!-- TAB 5: MẪU CÂU -->
+    <div id="tab5" class="tab-content">
+        <h2 class="section-title">Mẫu câu &amp; Hội thoại</h2>
+        <p class="section-sub">Các tình huống giao tiếp thường gặp.</p>
+
+        <div class="card">
+            <h3>Tình huống 1 · Tại quán ăn 饭馆</h3>
+
+            <div class="dialogue">
+                <div class="line">
+                    <span class="role">A</span>
+                    <div class="zh-text">你想喝什么？</div>
+                    <div class="py-text">Nǐ xiǎng hē shénme?</div>
+                    <div class="vi-text">Bạn muốn uống gì?</div>
+                </div>
+                <div class="line">
+                    <span class="role">B</span>
+                    <div class="zh-text">我想喝茶。</div>
+                    <div class="py-text">Wǒ xiǎng hē chá.</div>
+                    <div class="vi-text">Tôi muốn uống trà.</div>
+                </div>
+            </div>
+
+            <div class="dialogue">
+                <div class="line">
+                    <span class="role">A</span>
+                    <div class="zh-text">你想吃什么？</div>
+                    <div class="py-text">Nǐ xiǎng chī shénme?</div>
+                    <div class="vi-text">Bạn muốn ăn gì?</div>
+                </div>
+                <div class="line">
+                    <span class="role">B</span>
+                    <div class="zh-text">我想吃米饭。</div>
+                    <div class="py-text">Wǒ xiǎng chī mǐfàn.</div>
+                    <div class="vi-text">Tôi muốn ăn cơm.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>Tình huống 2 · Mua sắm tại cửa hàng 商店</h3>
+
+            <div class="dialogue">
+                <div class="line">
+                    <span class="role">A</span>
+                    <div class="zh-text">下午你想做什么？</div>
+                    <div class="py-text">Xiàwǔ nǐ xiǎng zuò shénme?</div>
+                    <div class="vi-text">Buổi chiều bạn muốn làm gì?</div>
+                </div>
+                <div class="line">
+                    <span class="role">B</span>
+                    <div class="zh-text">下午我想去商店。</div>
+                    <div class="py-text">Xiàwǔ wǒ xiǎng qù shāngdiàn.</div>
+                    <div class="vi-text">Buổi chiều tôi muốn đi cửa hàng.</div>
+                </div>
+            </div>
+
+            <div class="dialogue">
+                <div class="line">
+                    <span class="role">A</span>
+                    <div class="zh-text">这个杯子多少钱？</div>
+                    <div class="py-text">Zhège bēizi duōshao qián?</div>
+                    <div class="vi-text">Cái ly này bao nhiêu tiền?</div>
+                </div>
+                <div class="line">
+                    <span class="role">B</span>
+                    <div class="zh-text">二十八块。</div>
+                    <div class="py-text">Èrshíbā kuài.</div>
+                    <div class="vi-text">28 đồng.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- TAB 6: LỖI SAI -->
+    <div id="tab6" class="tab-content">
+        <h2 class="section-title">Lỗi sai thường gặp</h2>
+        <p class="section-sub">Ba lỗi điển hình của người Việt khi học Bài 8.</p>
+
+        <div class="error-grid">
+            <div class="error-box">
+                <div class="err-head wrong">Lỗi 1 · Thiếu lượng từ "个"</div>
+                <div class="err-body">
+                    <p style="margin-bottom: 12px;">Dịch word-by-word "Cái ly này/kia". Tiếng Trung luôn cần Đại từ + Lượng từ + Danh từ.</p>
+                    <p class="strike zh">那杯子多少钱？</p>
+                    <p class="strike zh">买两杯子。</p>
+                </div>
+                <div class="err-head correct">Cách sửa</div>
+                <div class="err-body">
+                    <p class="correct-text zh">那个杯子多少钱？</p>
+                    <p class="correct-text zh">买两个杯子。</p>
+                </div>
+            </div>
+
+            <div class="error-box">
+                <div class="err-head wrong">Lỗi 2 · Nhầm "几" và "多少"</div>
+                <div class="err-body">
+                    <p style="margin-bottom: 12px;">Dù giá tiền là số nhỏ, cụm từ cố định để hỏi giá tiền bắt buộc dùng 多少.</p>
+                    <p class="strike zh">这个几钱？</p>
+                </div>
+                <div class="err-head correct">Cách sửa</div>
+                <div class="err-body">
+                    <p class="correct-text zh">这个多少钱？</p>
+                </div>
+            </div>
+
+            <div class="error-box">
+                <div class="err-head wrong">Lỗi 3 · Dịch sai "Tiền"</div>
+                <div class="err-body">
+                    <p style="margin-bottom: 12px;">"块" là đơn vị tiền tệ khẩu ngữ (Đồng/Tệ). Không phải cứ "tiền" là dịch thành 钱 trong đơn giá.</p>
+                    <p class="strike zh">这个 28 钱。</p>
+                </div>
+                <div class="err-head correct">Cách sửa</div>
+                <div class="err-body">
+                    <p class="correct-text zh">这个二十八块（钱）。</p>
+                    <p style="font-size:0.88rem; color: var(--muted); margin-top: 6px;">Có thể thêm "钱" ở cuối hoặc không, nhưng bắt buộc phải có lượng từ "块".</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- TAB 7: BÀI TẬP LUYỆN TẬP -->
+    <div id="tab7" class="tab-content">
+        <h2 class="section-title">Luyện tập chuyên sâu</h2>
+        <p class="section-sub">Bấm "Hiển thị đáp án" để tự kiểm tra.</p>
+
+        <div id="practice-container">
+            <!-- Rendered via JS -->
+        </div>
+    </div>
+
+    <!-- TAB 8: KIỂM TRA CUỐI BÀI -->
+    <div id="tab8" class="tab-content">
+        <h2 class="section-title">Kiểm tra cuối bài</h2>
+        <p class="section-sub">10 câu tổng hợp để đánh giá khả năng hiểu Bài 8.</p>
+
+        <div id="quiz-container">
+            <!-- Quiz injected via JS -->
+        </div>
+
+        <button class="btn-submit" onclick="submitQuiz()">Nộp bài &amp; Xem kết quả</button>
+        <div id="quiz-final-score" style="text-align: center; font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-weight: 700; color: var(--burgundy); display: none; margin: 24px 0; background: var(--paper); padding: 28px; border-radius: 14px; border: 1px solid var(--gold); box-shadow: var(--shadow); letter-spacing: -0.01em;"></div>
+    </div>
+
+</div>
+
+<div class="toast" id="toast">Đã sao chép vào clipboard</div>
+
+<script>
+    // ============================
+    // PINYIN-PRO HELPER
+    // ============================
+    function getPinyin(text) {
+        try {
+            if (window.pinyinPro && typeof window.pinyinPro.pinyin === 'function') {
+                return window.pinyinPro.pinyin(text, { type: 'array', toneType: 'symbol', nonZh: 'spaceAll' });
+            }
+        } catch (e) { console.error('Pinyin error', e); }
+        return null;
+    }
+
+    function isHanzi(ch) {
+        const code = ch.charCodeAt(0);
+        return (code >= 0x4E00 && code <= 0x9FFF) ||
+               (code >= 0x3400 && code <= 0x4DBF) ||
+               (code >= 0x20000 && code <= 0x2A6DF);
+    }
+
+    function renderRuby(text, previewEl) {
+        previewEl.innerHTML = '';
+        if (!text || !text.trim()) {
+            previewEl.classList.add('empty');
+            return;
+        }
+        previewEl.classList.remove('empty');
+
+        const chars = Array.from(text);
+        const pyList = getPinyin(text);
+
+        chars.forEach((ch, i) => {
+            if (ch === '\n') {
+                previewEl.appendChild(document.createElement('br'));
+                return;
+            }
+            if (isHanzi(ch)) {
+                const ruby = document.createElement('ruby');
+                const rb = document.createElement('rb');
+                rb.textContent = ch;
+                const rt = document.createElement('rt');
+                rt.textContent = (pyList && pyList[i]) ? pyList[i] : '';
+                ruby.appendChild(rt);
+                ruby.appendChild(rb);
+                previewEl.appendChild(ruby);
+            } else {
+                const span = document.createElement('span');
+                span.className = 'punct';
+                span.textContent = ch;
+                previewEl.appendChild(span);
+            }
+        });
+    }
+
+    // ============================
+    // TAB LOGIC
+    // ============================
+    function openTab(tabId, btn) {
+        document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
+        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+
+        document.getElementById(tabId).classList.add('active');
+        btn.classList.add('active');
+
+        if (tabId === 'tab2' && !window.writersInitialized) {
+            initHanziWriters();
+            window.writersInitialized = true;
+        }
+        // Scroll active tab into view on mobile
+        btn.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // ============================
+    // VOCAB DATA
+    // ============================
+    const vocabData = [
+        { hz: '想', py: 'xiǎng', hv: 'Tưởng', type: 'Động từ', mean: 'Muốn, nghĩ, nhớ', comps: '想吃 (muốn ăn), 想要 (muốn lấy)', story: 'Bộ 心 (Tâm) nằm dưới chữ 相 (Tương). Trong lòng nghĩ về điều gì đó.', exZh: '下午我想去商店。', exPy: 'Xiàwǔ wǒ xiǎng qù shāngdiàn.' },
+        { hz: '喝', py: 'hē', hv: 'Hát', type: 'Động từ', mean: 'Uống', comps: '喝茶 (uống trà), 喝水 (uống nước)', story: 'Bộ 口 (Khẩu - miệng) bên trái. Hoạt động liên quan đến miệng.', exZh: '你想喝什么？', exPy: 'Nǐ xiǎng hē shénme?' },
+        { hz: '茶', py: 'chá', hv: 'Trà', type: 'Danh từ', mean: 'Trà, chè', comps: '喝茶 (uống trà), 绿茶 (trà xanh)', story: 'Bộ 艹 (Thảo - cây cỏ). Trà là một loại lá cây thực vật.', exZh: '我想喝茶。', exPy: 'Wǒ xiǎng hē chá.' },
+        { hz: '吃', py: 'chī', hv: 'Cật', type: 'Động từ', mean: 'Ăn', comps: '吃饭 (ăn cơm), 好吃 (ngon)', story: 'Bộ 口 (Khẩu) và 乞 (Khất). Há miệng để xin ăn.', exZh: '你想吃什么？', exPy: 'Nǐ xiǎng chī shénme?' },
+        { hz: '米', py: 'mǐ', hv: 'Mễ', type: 'Danh từ', mean: 'Gạo, mét', comps: '米饭 (cơm), 大米 (gạo)', story: 'Hình ảnh những hạt gạo rời ra từ bông lúa.', exZh: '我买米。', exPy: 'Wǒ mǎi mǐ.' },
+        { hz: '饭', py: 'fàn', hv: 'Phạn', type: 'Danh từ', mean: 'Cơm, bữa ăn', comps: '米饭 (cơm trắng), 做饭 (nấu cơm)', story: 'Bộ 饣(Thực - thức ăn) ghép với 反 (Phản).', exZh: '我想吃米饭。', exPy: 'Wǒ xiǎng chī mǐfàn.' },
+        { hz: '下', py: 'xià', hv: 'Hạ', type: 'Danh từ/ĐT', mean: 'Dưới, chiều, xuống', comps: '下午 (buổi chiều), 下雨 (mưa)', story: 'Chỉ thị sự vật nằm ở bên dưới vạch ngang.', exZh: '下午我想去商店。', exPy: 'Xiàwǔ wǒ xiǎng qù shāngdiàn.' },
+        { hz: '午', py: 'wǔ', hv: 'Ngọ', type: 'Danh từ', mean: 'Buổi trưa', comps: '上午 (sáng), 中午 (trưa), 下午 (chiều)', story: 'Hình ảnh cái chày giã gạo, ngày xưa thường giã vào giữa ngày.', exZh: '下午见。', exPy: 'Xiàwǔ jiàn.' },
+        { hz: '商', py: 'shāng', hv: 'Thương', type: 'Danh từ', mean: 'Buôn bán', comps: '商店 (cửa hàng), 商人 (thương nhân)', story: 'Người đứng ra bàn bạc, trao đổi hàng hóa.', exZh: '我去商店。', exPy: 'Wǒ qù shāngdiàn.' },
+        { hz: '店', py: 'diàn', hv: 'Điếm', type: 'Danh từ', mean: 'Cửa hàng', comps: '书店 (nhà sách), 饭店 (nhà hàng)', story: 'Bộ 广 (Nghiễm - mái nhà) bao che cho hoạt động trao đổi bên trong.', exZh: '我想去商店买杯子。', exPy: 'Wǒ xiǎng qù shāngdiàn mǎi bēizi.' },
+        { hz: '买', py: 'mǎi', hv: 'Mãi', type: 'Động từ', mean: 'Mua', comps: '买卖 (mua bán), 买东西 (mua đồ)', story: 'Bộ 乛 bao trùm lên 头. Mua mang đồ đội lên đầu.', exZh: '你想买什么？', exPy: 'Nǐ xiǎng mǎi shénme?' },
+        { hz: '个', py: 'gè', hv: 'Cá', type: 'Lượng từ', mean: 'Cái, chiếc, người', comps: '一个杯子 (1 cái ly), 一个人 (1 người)', story: 'Lượng từ dùng phổ biến nhất trong tiếng Trung.', exZh: '我买一个杯子。', exPy: 'Wǒ mǎi yí ge bēizi.' },
+        { hz: '杯', py: 'bēi', hv: 'Bôi', type: 'Danh từ/LT', mean: 'Cái ly, cốc', comps: '杯子 (cái ly), 一杯茶 (1 ly trà)', story: 'Bộ 木 (Mộc - gỗ). Ngày xưa ly tách thường làm bằng gỗ.', exZh: '这个杯子多少钱？', exPy: 'Zhège bēizi duōshao qián?' },
+        { hz: '多', py: 'duō', hv: 'Đa', type: 'Tính từ', mean: 'Nhiều', comps: '多少 (bao nhiêu), 很多 (rất nhiều)', story: 'Hai chữ 夕 (Tịch - buổi tối) xếp lên nhau. Đêm này qua đêm khác = Nhiều.', exZh: '多少钱？', exPy: 'Duōshao qián?' },
+        { hz: '少', py: 'shǎo', hv: 'Thiểu', type: 'Tính từ', mean: 'Ít', comps: '多少 (bao nhiêu), 很少 (rất ít)', story: 'Lấy từ chữ 小 (Nhỏ), vạch thêm nét phẩy để chỉ sự thiếu hụt.', exZh: '这个多少钱？', exPy: 'Zhège duōshao qián?' },
+        { hz: '钱', py: 'qián', hv: 'Tiền', type: 'Danh từ', mean: 'Tiền', comps: '多少钱 (Bao nhiêu tiền)', story: 'Bộ 钅 (Kim - kim loại). Tiền cổ làm bằng kim loại.', exZh: '那杯子多少钱？', exPy: 'Nà bēizi duōshao qián?' },
+        { hz: '块', py: 'kuài', hv: 'Khối', type: 'Lượng từ', mean: 'Đồng (tiền), cục, viên', comps: '十块 (10 đồng)', story: 'Bộ 土 (Thổ - đất). Viên đất sét, sau dùng làm đơn vị tiền tệ khẩu ngữ.', exZh: '28块。', exPy: 'Èrshíbā kuài.' },
+        { hz: '那', py: 'nà', hv: 'Na', type: 'Đại từ', mean: 'Kia, đó', comps: '那个 (Cái kia), 那里 (Ở kia)', story: 'Chỉ sự vật ở xa người nói.', exZh: '那个杯子18块。', exPy: 'Nàge bēizi shíbā kuài.' }
+    ];
+
+    function renderVocab() {
+        const container = document.getElementById('vocab-container');
+        let html = '';
+        vocabData.forEach((v, index) => {
+            const writerId = `hw-vocab-${index}`;
+            const num = String(index + 1).padStart(2, '0');
+            html += `
+                <article class="vocab-card">
+                    <div class="vocab-inner">
+                        <div class="vocab-left">
+                            <div class="vocab-header-row">
+                                <div class="writer-box">
+                                    <div id="${writerId}" class="hw-target"></div>
+                                    <button class="btn-animate" onclick="writers['${writerId}'].animateCharacter()">Tập viết</button>
+                                </div>
+                                <div class="vocab-info">
+                                    <div class="vocab-index">Từ ${num} / ${String(vocabData.length).padStart(2, '0')}</div>
+                                    <div class="pinyin">${v.py}</div>
+                                    <div class="hanviet">Hán Việt · <b>${v.hv}</b></div>
+                                    <span class="type-badge">${v.type}</span>
+                                </div>
+                            </div>
+                            <div class="vocab-section">
+                                <h4>Nghĩa</h4>
+                                <div class="vocab-meaning">${v.mean}</div>
+                            </div>
+                            <div class="vocab-section">
+                                <h4>Tổ hợp từ</h4>
+                                <p class="vocab-meta">${v.comps}</p>
+                            </div>
+                        </div>
+
+                        <div class="vocab-right">
+                            <div class="vocab-section" style="margin-top: 0;">
+                                <h4>Câu chuyện chữ Hán</h4>
+                                <p class="vocab-story">${v.story}</p>
+                            </div>
+                            <div class="vocab-section">
+                                <h4>Ví dụ trong bài</h4>
+                                <div class="vocab-example">
+                                    <div class="ex-zh">${v.exZh}</div>
+                                    <div class="ex-py">${v.exPy}</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="teach-tool">
+                            <div class="teach-tool-label">Ví dụ của giảng viên · Tự động Pinyin <span class="badge-new">LIVE</span></div>
+                            <textarea
+                                class="teach-input"
+                                id="teach-in-${index}"
+                                placeholder="Gõ câu ví dụ có chữ ${v.hz} vào đây… Pinyin sẽ tự động hiện bên dưới."
+                                oninput="onTeacherInput(${index})"
+                            ></textarea>
+                            <div class="teach-preview empty" id="teach-out-${index}"></div>
+                            <div class="teach-actions">
+                                <button class="teach-btn primary" onclick="copyExample(${index})">Sao chép Hán + Pinyin</button>
+                                <button class="teach-btn gold" onclick="useStarter(${index}, '${v.hz}')">Mẫu nhanh: ${v.hz}…</button>
+                                <button class="teach-btn ghost" onclick="clearExample(${index})">Xoá</button>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            `;
+        });
+        container.innerHTML = html;
+    }
+
+    // Teacher tool handlers
+    function onTeacherInput(index) {
+        const input = document.getElementById('teach-in-' + index);
+        const preview = document.getElementById('teach-out-' + index);
+        renderRuby(input.value, preview);
+    }
+    function clearExample(index) {
+        const input = document.getElementById('teach-in-' + index);
+        const preview = document.getElementById('teach-out-' + index);
+        input.value = '';
+        preview.innerHTML = '';
+        preview.classList.add('empty');
+        input.focus();
+    }
+    function useStarter(index, hz) {
+        const starters = {
+            '想': '我想喝一杯茶。',
+            '喝': '请你喝水。',
+            '茶': '这杯茶很好喝。',
+            '吃': '我们一起吃饭吧。',
+            '米': '这是中国大米。',
+            '饭': '我做了米饭。',
+            '下': '下午我去学校。',
+            '午': '中午我们吃面条。',
+            '商': '商人很忙。',
+            '店': '这家书店很大。',
+            '买': '我想买两个苹果。',
+            '个': '我有三个朋友。',
+            '杯': '请给我一杯咖啡。',
+            '多': '今天的作业很多。',
+            '少': '我的钱很少。',
+            '钱': '我没有钱。',
+            '块': '这本书十五块。',
+            '那': '那个人是谁？'
+        };
+        const text = starters[hz] || `${hz}。`;
+        const input = document.getElementById('teach-in-' + index);
+        input.value = text;
+        onTeacherInput(index);
+        input.focus();
+    }
+    function copyExample(index) {
+        const input = document.getElementById('teach-in-' + index);
+        const text = input.value.trim();
+        if (!text) { showToast('Chưa có ví dụ để sao chép'); return; }
+
+        const pyList = getPinyin(text);
+        const chars = Array.from(text);
+        const hzLine = text;
+        const pyLine = chars.map((ch, i) => isHanzi(ch) && pyList && pyList[i] ? pyList[i] : '')
+                            .join(' ').replace(/\s+/g, ' ').trim();
+        const out = `${hzLine}\n${pyLine}`;
+
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(out).then(
+                () => showToast('Đã sao chép Hán + Pinyin'),
+                () => fallbackCopy(out)
+            );
+        } else {
+            fallbackCopy(out);
+        }
+    }
+    function fallbackCopy(text) {
+        const ta = document.createElement('textarea');
+        ta.value = text;
+        ta.style.position = 'fixed';
+        ta.style.opacity = '0';
+        document.body.appendChild(ta);
+        ta.select();
+        try { document.execCommand('copy'); showToast('Đã sao chép'); }
+        catch (e) { showToast('Không sao chép được'); }
+        document.body.removeChild(ta);
+    }
+
+    let toastTimer;
+    function showToast(msg) {
+        const el = document.getElementById('toast');
+        el.textContent = msg;
+        el.classList.add('show');
+        clearTimeout(toastTimer);
+        toastTimer = setTimeout(() => el.classList.remove('show'), 1800);
+    }
+
+    const writers = {};
+    function initHanziWriters() {
+        setTimeout(() => {
+            const isMobile = window.matchMedia('(max-width: 640px)').matches;
+            const size = isMobile ? 88 : 112;
+            vocabData.forEach((v, index) => {
+                const writerId = `hw-vocab-${index}`;
+                const charToDraw = v.hz.charAt(0);
+                writers[writerId] = HanziWriter.create(writerId, charToDraw, {
+                    width: size, height: size, padding: 5,
+                    strokeAnimationSpeed: 1.4, delayBetweenStrokes: 140,
+                    strokeColor: '#1E293B',
+                    radicalColor: '#8B1538',
+                    outlineColor: '#E5DFD2',
+                    showOutline: true
+                });
+            });
+        }, 200);
+    }
+
+    // ============================
+    // FLASHCARD
+    // ============================
+    let currentFcIndex = 0;
+    const fcData = vocabData;
+
+    function updateFlashcard() {
+        const card = document.getElementById('fc-card');
+        card.classList.remove('is-flipped');
+        setTimeout(() => {
+            document.getElementById('fc-hz').innerText = fcData[currentFcIndex].hz;
+            document.getElementById('fc-py').innerText = fcData[currentFcIndex].py;
+            document.getElementById('fc-mean').innerText = fcData[currentFcIndex].mean;
+            document.getElementById('fc-ex').innerText = fcData[currentFcIndex].exZh;
+            document.getElementById('fc-progress').innerText = `${currentFcIndex + 1} / ${fcData.length}`;
+        }, 150);
+    }
+    function flipCard() { document.getElementById('fc-card').classList.toggle('is-flipped'); }
+    function nextCard() { currentFcIndex = (currentFcIndex + 1) % fcData.length; updateFlashcard(); }
+    function prevCard() { currentFcIndex = (currentFcIndex - 1 + fcData.length) % fcData.length; updateFlashcard(); }
+
+    document.addEventListener('keydown', (e) => {
+        if (!document.getElementById('tab3').classList.contains('active')) return;
+        if (e.target.tagName === 'TEXTAREA' || e.target.tagName === 'INPUT') return;
+        if (e.key === 'ArrowRight') nextCard();
+        else if (e.key === 'ArrowLeft') prevCard();
+        else if (e.key === ' ' || e.key === 'Enter') { e.preventDefault(); flipCard(); }
+    });
+
+    // Touch swipe for flashcard on mobile
+    let touchStartX = 0;
+    function initFcSwipe() {
+        const card = document.getElementById('fc-card');
+        card.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
+        card.addEventListener('touchend', e => {
+            const dx = e.changedTouches[0].clientX - touchStartX;
+            if (Math.abs(dx) > 60) {
+                if (dx < 0) nextCard(); else prevCard();
+            }
+        });
+    }
+
+    // ============================
+    // PRACTICE
+    // ============================
+    const practiceData = [
+        {
+            section: "1. Động từ năng nguyện 想 (xiǎng)",
+            exercises: [
+                { type: "fill", q: "下午我 ___ 去商店买杯子。 (Muốn)", a: "想" },
+                { type: "mcq", q: "Chọn câu ĐÚNG:", opts: ["他没想喝茶。", "他不想喝茶。"], a: 1, exp: "Phủ định của '想' (muốn) là '不想'." },
+                { type: "trans", q: "Dịch: Bạn muốn ăn gì?", a: "你想吃什么？" }
+            ]
+        },
+        {
+            section: "2. Hỏi số lượng / Giá tiền với 多少",
+            exercises: [
+                { type: "fill", q: "这个杯子 ___ 钱？ (Bao nhiêu)", a: "多少" },
+                { type: "mcq", q: "Chọn câu ĐÚNG để hỏi giá:", opts: ["几钱？", "多少钱？"], a: 1, exp: "Hỏi giá tiền bắt buộc dùng 多少钱." },
+                { type: "mcq", q: "Trường bạn có bao nhiêu giáo viên?", opts: ["你们学校有几个老师？", "你们学校有多少老师？", "Cả hai đều được"], a: 2, exp: "Hỏi số lượng có thể dùng 几 (<10) hoặc 多少 (>10 / không xác định)." }
+            ]
+        },
+        {
+            section: "3. Lượng từ 个, 块 & Đại từ 这, 那",
+            exercises: [
+                { type: "mcq", q: "Cái ly kia:", opts: ["那杯子", "那个杯子"], a: 1, exp: "Đại từ chỉ định (这/那) + Lượng từ (个) + Danh từ (杯子)." },
+                { type: "fill", q: "这个杯子十五 ___。 (Đồng)", a: "块" },
+                { type: "trans", q: "Dịch: Tôi muốn mua một cái ly.", a: "我想买一个杯子。" }
+            ]
+        }
+    ];
+
+    function renderPractice() {
+        const container = document.getElementById('practice-container');
+        let html = '';
+        practiceData.forEach((sec, sIdx) => {
+            html += `<div class="exercise-section"><div class="ex-title">${sec.section}</div>`;
+            sec.exercises.forEach((ex, eIdx) => {
+                const id = `ex-${sIdx}-${eIdx}`;
+                html += `<div class="q-box">`;
+                html += `<div class="q-prompt">${eIdx + 1}. ${ex.q}</div>`;
+                if (ex.type === 'mcq') {
+                    html += `<div class="q-options">`;
+                    ex.opts.forEach((opt) => {
+                        html += `<label class="q-opt"><input type="radio" name="${id}" disabled> <span>${opt}</span></label>`;
+                    });
+                    html += `</div>`;
+                }
+                html += `<button class="btn-toggle" onclick="toggleAnswer('${id}')">Hiển thị đáp án</button>`;
+                html += `<div id="ans-${id}" class="answer-reveal">`;
+                if (ex.type === 'mcq') {
+                    html += `<strong>Đáp án:</strong> ${ex.opts[ex.a]}<br><em style="color: var(--muted);">${ex.exp}</em>`;
+                } else {
+                    html += `<strong>Đáp án:</strong> ${ex.a}`;
+                }
+                html += `</div></div>`;
+            });
+            html += `</div>`;
+        });
+        container.innerHTML = html;
+    }
+    function toggleAnswer(id) {
+        const ansDiv = document.getElementById(`ans-${id}`);
+        ansDiv.style.display = ansDiv.style.display === 'block' ? 'none' : 'block';
+    }
+
+    // ============================
+    // QUIZ
+    // ============================
+    const quizData = [
+        { q: "1. 'Tôi không muốn ăn cơm' tiếng Trung nói thế nào?", opts: ["我不想吃米饭。", "我没想吃米饭。", "我不吃想米饭。", "我想不吃米饭。"], ans: 0, exp: "Phủ định của Động từ năng nguyện 想 là 不想 + V." },
+        { q: "2. Từ '多少' (duōshao) thường dùng để hỏi:", opts: ["Ai", "Khi nào", "Bao nhiêu (số lượng > 10)", "Ở đâu"], ans: 2, exp: "多少 dùng để hỏi số lượng (đặc biệt > 10 hoặc không xác định)." },
+        { q: "3. Chọn cách hỏi giá tiền ĐÚNG:", opts: ["这个杯子多少？", "这个杯子几钱？", "这个杯子多少钱？", "杯子多少钱这个？"], ans: 2, exp: "Cụm cố định hỏi giá tiền là '多少钱'." },
+        { q: "4. Điền vào chỗ trống: 下午我想 ___ 商店买杯子。", opts: ["是 (shì)", "看 (kàn)", "去 (qù)", "喝 (hē)"], ans: 2, exp: "Đi đến cửa hàng dùng động từ 去 (qù)." },
+        { q: "5. Tìm lỗi sai trong câu: 那杯子二十块。", opts: ["那", "杯子", "二十", "块"], ans: 0, exp: "Thiếu lượng từ. Sửa đúng: 那个杯子二十块。" },
+        { q: "6. Dịch 'Tôi muốn uống trà' sang tiếng Trung:", opts: ["我喝茶。", "我想喝茶。", "我买茶。", "我想茶喝。"], ans: 1, exp: "想 (muốn) + 喝 (uống) + 茶 (trà)." },
+        { q: "7. Đại từ chỉ định '这' (zhè) nghĩa là gì?", opts: ["Kia, đó (ở xa)", "Này, đây (ở gần)", "Cái gì", "Nào"], ans: 1, exp: "这 (zhè) dùng để chỉ sự vật ở gần người nói." },
+        { q: "8. '块' (kuài) trong '十块钱' đóng vai trò gì?", opts: ["Danh từ", "Động từ", "Lượng từ tiền tệ", "Đại từ"], ans: 2, exp: "块 là lượng từ khẩu ngữ chỉ đơn vị tiền tệ." },
+        { q: "9. Điền vào chỗ trống: 你想买 ___ ?", opts: ["怎么 (zěnme)", "多少 (duōshao)", "什么 (shénme)", "谁 (shéi)"], ans: 2, exp: "Bạn muốn mua CÁI GÌ? → 买什么." },
+        { q: "10. Câu '下午我想去商店' nghĩa là:", opts: ["Buổi sáng tôi muốn đi trường học.", "Buổi chiều tôi muốn đi cửa hàng.", "Buổi chiều tôi đi mua ly.", "Tôi muốn ăn cơm ở cửa hàng."], ans: 1, exp: "下午 (chiều), 想 (muốn), 去商店 (đi cửa hàng)." }
+    ];
+
+    function renderQuiz() {
+        const container = document.getElementById('quiz-container');
+        let html = '';
+        quizData.forEach((item, index) => {
+            const optionsHTML = item.opts.map((opt, i) => `
+                <label class="q-opt">
+                    <input type="radio" name="finalq${index}" value="${i}">
+                    <span>${opt}</span>
+                </label>
+            `).join('');
+            html += `
+                <div class="q-box" id="final-q-${index}">
+                    <div class="q-prompt">${item.q}</div>
+                    <div class="q-options">${optionsHTML}</div>
+                    <div class="quiz-feedback" id="final-fb-${index}"></div>
+                </div>
+            `;
+        });
+        container.innerHTML = html;
+    }
+
+    function submitQuiz() {
+        let score = 0;
+        let allAnswered = true;
+        quizData.forEach((item, index) => {
+            const qDiv = document.getElementById(`final-q-${index}`);
+            const feedback = document.getElementById(`final-fb-${index}`);
+            const selected = document.querySelector(`input[name="finalq${index}"]:checked`);
+
+            qDiv.classList.remove('is-correct', 'is-wrong');
+            feedback.style.display = 'none';
+
+            if (!selected) {
+                allAnswered = false;
+                feedback.innerHTML = "<strong>Vui lòng chọn đáp án!</strong>";
+                feedback.className = "quiz-feedback is-wrong";
+                feedback.style.display = 'block';
+                return;
+            }
+            const isCorrect = parseInt(selected.value) === item.ans;
+            if (isCorrect) {
+                score++;
+                feedback.innerHTML = `<strong>Chính xác.</strong><br><span style="font-size:0.9rem; color: var(--ink-soft);">${item.exp}</span>`;
+                feedback.className = "quiz-feedback is-correct";
+            } else {
+                feedback.innerHTML = `<strong>Sai.</strong> Đáp án đúng: <b>${item.opts[item.ans]}</b>.<br><span style="font-size:0.9rem; color: var(--ink-soft);">${item.exp}</span>`;
+                feedback.className = "quiz-feedback is-wrong";
+            }
+            feedback.style.display = 'block';
+        });
+
+        if (allAnswered) {
+            const scoreDiv = document.getElementById('quiz-final-score');
+            const pct = Math.round((score / quizData.length) * 100);
+            scoreDiv.innerHTML = `Điểm: ${score} / ${quizData.length} <span style="font-size: 1rem; color: var(--muted); font-weight: 500; margin-left: 10px; font-family: 'Inter', sans-serif;">(${pct}%)</span>`;
+            scoreDiv.style.display = 'block';
+            scoreDiv.scrollIntoView({behavior: "smooth"});
+        } else {
+            alert("Vui lòng hoàn thành tất cả các câu hỏi trước khi nộp bài.");
+        }
+    }
+
+    // ============================
+    // INIT
+    // ============================
+    document.addEventListener('DOMContentLoaded', () => {
+        renderVocab();
+        renderPractice();
+        renderQuiz();
+        updateFlashcard();
+        initFcSwipe();
+    });
+</script>
+
+</body>
+</html>
